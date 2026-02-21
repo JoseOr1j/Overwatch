@@ -1,3 +1,15 @@
+'''
+Docstring for overwatch
+This is a simple overwatch game with hero classes and functions
+
+Test Case Autonation Plan
+Author: Jose Orozco
+Date: 1/20/2026
+Goal: To create a simple overwatch game with hero classes and functions to demonstrate OOP concepts and test case automation
+'''
+
+
+
 class Hero: 
     def __init__(self, name, health, max_health, ammo, take_damage, ult, is_alive):
         # attribute in hero class cant have the same name as a function 
@@ -262,11 +274,7 @@ class Moira:
 
 ###
 """ ==============================
-Things to do:
-STAR method
-Ask follow up questions 
-
-QA questions: 
+QA
 
 q: How can you test a pencil:
 I would test the material it is made out of for the durability 
@@ -278,7 +286,7 @@ If it is able to be sharpened
 
 q: Black Box testing
 Black box is when you are testing the functions of the device without knowing
-how it works for example testing fyi app without knowing the code but testing the functionality 
+how it works for example testing an app without knowing the code but testing the functionality 
 of the app
 
 q: White box testing 
@@ -332,7 +340,7 @@ but then bug 101 was found again on build 33 later on, that is a regression bc t
 
 q: what is unit testing ?
 unit testing is usually associated with white box testing 
-involves testing units of an app as individuals rather than as a whole system
+involves testing units of an app as individuals rather than as a whole system 
 so this involves testing pieces of code to ensure that each function or unit works properly 
 looks like 
 assert (xyz) == "xyz"
