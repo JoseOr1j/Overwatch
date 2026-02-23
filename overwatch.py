@@ -9,7 +9,7 @@ Goal: To create a simple overwatch game with hero classes and functions to demon
 '''
 
 
-
+# goal here is to make hero class so that other classes can reference it and we dont have to retype the same code for each hero class
 class Hero: 
     def __init__(self, name, health, max_health, ammo, take_damage, ult, is_alive):
         # attribute in hero class cant have the same name as a function 
@@ -204,7 +204,27 @@ else:    myMery.damage()
 # object = a specific hero like Dva or Soldier 76
 # functions = actions it can do such as fire, heal, dva boosters, etc
 # attributes = health, ammo, name, etc
-
+class JunkerQueen:
+    def __init__(self):
+        self.name = "Junker Queen"
+        self.health = 200
+        self.ammo = 100
+        self.damage = 0
+    
+    def damage(self):
+        print("Junker Queen damages the enemy")
+        self.damage += 20
+        self.ammo -= 1
+    
+    def commandingShout(self):
+        print("Junker Queen uses her adrelinene rush")
+        self.health =+ 250
+        self.speed =+ 5
+        
+    def rampage(self):
+        print("Junker queen is ready to rampage")
+        self.damage += 100
+        self.speed =+ 50
         
 
 class Moira:
@@ -218,7 +238,9 @@ class Moira:
         
     def fade(self):
         print('moira fades away')
-        
+        self.duration =+ 5
+        self.speed =+ 5
+        self.max_range = 10
         
     def heal(self):
         print("Moira heals")
