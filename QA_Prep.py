@@ -1,3 +1,4 @@
+###
 """ ==============================
 QA Stuff 
 
@@ -53,15 +54,17 @@ q: What is a bug?
 A bug is an issue that is found in a piece of software or hardware
 In QA a bug is any problem that impacts the functionality of the software 
 A bug has a variety of severity levels on JIRA such as low/mid/high/blocker 
-UI issues/text errors are usually low 
-Middle is usually issues that are harder to reproduce 
-High are issues which affect a large component of the apps functionality, but app still works
+UI issues/text errors are usually low severity, but high priority 
+High are issues which affect a lot from a technical standpoint. 
 Blockers are issues which cease the apps functionality and must be addressed before moving to new builds or itertaions 
 
 q: What is a regression?
 A regression is an issue/bug that has returned on a new build of the software 
 ie bug 101 was found on build 20 and was fixed on build 23
 but then bug 101 was found again on build 33 later on, that is a regression bc the bug regressed 
+
+Specifically if a new build was pushed testing previously working functions after new changes, bug fixes to ensure
+nothing new broke and build works as expected 
 
 q: what is unit testing ?
 unit testing is usually associated with white box testing 
@@ -71,11 +74,9 @@ looks like
 assert (xyz) == "xyz"
 assert (lol) = "lol"
 
-q: How to categorize a bugs severity on JIRA?
-A bugs severity levels depend on how much a bug impacts the function of an app 
-If a bug is a UI issue which impacts something like a login, that is usually high priority to fix if it impacts the login directly
-If the bug is an issue where the backend authentciation for login fails and no user can login that is usually a severe bug also known as a blocker and 
-must be fixed before any new builds are introduced to the public 
+q: Severity versus Priority on JIRA 
+Severity involves how it impacts the app on a technical standpoint, ie a tool breaks which does not impact users would be high severity, low priority. 
+Priority involves how it impacts the app on a business standpoint, ie there is a spelling mistake on the app would be low severity, high priority.
 
 q: write a sample test case?
 Test Case 1: 
@@ -91,6 +92,8 @@ P1 taps on the audio button and taps to speak
 ! P1 should be able to talk to the AI 
 Expected behavior is etc etc
 Attachments on JIRA: Videos or Photos
+Any crash logs if required 
+Any error messages 
 
 q: What is the difference between functional and non functional testing? 
 Functional testing has to do with testing based on business requirments such as "does the login work?", "does the AI chatbot work?"
@@ -115,8 +118,6 @@ Ad-Hoc: Fun but with a purpose
 Exploratory: Even more fun, just random testing
 Stress: What is the number of users the server load can take before the app shuts down 
 Compatibility: Localization, currency, language, cultural 
-
-
 
 ====================== """ 
 
