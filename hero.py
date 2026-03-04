@@ -1,5 +1,44 @@
 # main hero class that defines everything for the other classes 
 
+class Cosmetics:
+    def __init__(self, skin, emote, voice_line, cost):
+        self.skin = skin
+        self.emote = emote
+        self.voice_line = voice_line
+        self.cost = cost 
+    
+class Rank:
+    def __init__(
+        self, tier, division, points
+        
+    ):
+        self.tier = tier
+        self.division = division
+        self.points = points
+        
+        
+class BattlePass:
+    def __init__(self, level, exp, rewards):
+        self.tier = self.tier
+        self.level = level
+        self.exp = exp
+        self.rewards = rewards
+        
+class Endorsement:
+    def __init__(self, level):
+        self.level = level
+        
+    def endorsementCheck(self):
+        if (Endorsement.level > 0):
+            print("Endorsement is to low")
+            
+        elif (Endorsement.level < 0):
+            print("Endorsement is above 0, voice chat is allowed")
+            
+        else:
+            print("Not avaliable banned or other status")
+        
+
 class Hero:
     def __init__(
         self,
@@ -107,13 +146,13 @@ class Dva(Hero):
                  damage_per_shot = 2,
                  healing_per_use = 0
              )
+             self.energy = 0
+             
+            ''' def particle_barrier(self):
+                if not self.is_alive():
+                    return "Zarya cannot use particle barrier"
+                return "Zarya uses particle barrier" '''
         
-        
-    ''' def particle_barrier(self):
-            if not self.is_alive():
-                return "Zarya cannot use Particle barrier"
-            return "Zarya uses particle barrier"
-'''
 
 
 # main function to actually test the Dva class and its methods
