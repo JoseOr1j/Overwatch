@@ -18,7 +18,7 @@ class Rank:
         
         
 class BattlePass:
-    def __init__(self, level, exp, rewards):
+    def __init__(self, level, exp, rewards, test):
         self.tier = self.tier
         self.level = level
         self.exp = exp
