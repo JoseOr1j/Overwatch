@@ -1,6 +1,6 @@
 ## Overwatch Classes and Automation 
 
-Learning Automation through Overwatch 
+Learning OOP and Automation through Overwatch 
 ## Getting Started
 
 Download file and extract zip files.
