@@ -24,6 +24,51 @@ class BattlePass:
         self.exp = exp
         self.rewards = rewards
         
+        
+class Weapon:
+    def __init__(self, ammo, damage, fire_rate, reload_time):
+        self.ammo = ammo
+        self.damage = damage
+        self.fire_rate = fire_rate
+        self.reload_time = reload_time
+        
+    def shoot(self):
+        if self.ammo <= 0:
+            print("Out of ammo, reloading")
+            self.reload()
+            return False
+        self.ammo -= 1
+        print(f"Shot fired! Ammo left: {self.ammo}")
+        return True
+    
+    def reload(self):
+        print("Reloading... Please wait.")
+        self.ammo = 30 
+        # depends on the hero 
+        
+        
+class Map:
+    def __init__(self, name, type, size):
+        self.name = name
+        self.type = type
+        self.size = size
+        
+    def start_match(self):
+        print("Starting m,atch on", self.name)
+        
+    def end_match(self):
+        print("Match ended on", self.name)
+        
+    def calc_winner(self, team1_score, team2_score):
+        if team1_score > team2_score:
+            return "Team 1 wins!"
+        elif team2_score > team1_score:
+            return "Team 2 wins!"
+        else:
+            return "It's a tie!"
+        
+    
+    
 class Endorsement:
     def __init__(self, level):
         self.level = level
